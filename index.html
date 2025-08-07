@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <div class="container-formulario">
+        <h1>Feira SENAC 2025</h1>
+        <header class="formulario-cabecalho">
+            <h1>Inscrição para feira SENAC 2025</h1>
+            <p>Preencha o <strong>formulário </strong>abaixo
+                para garantir <em>sua vaga</em> no maior
+                evento de tecnologia do ano!
+            </p>
+        </header>
+        <form action="" method="post" class="formulario">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div class="campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+                <div class="campo">
+                    <label for="nascimento">Ano de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                </div>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Preferências do Evento</legend>
+                <div class="campo">
+                    <label> Tipo de inscrição(Escolha uma)</label>
+                    <div class="grupo-radio">
+                        <input type="radio" id="estudante" name="tipo_inscricao" value="profissional">
+                        <label for="estudante">Estudante</label>
+
+                    </div>
+                    <div class="grupo-radio">
+                        <input type="radio" id="profissional" name="tipo_inscricao" value="profissional">
+                        <label for="profissional">Profissional</label>
+
+                    </div>
+                    <div class="campo">
+                        <label> áreas de interesse(Pode marcar varias):</label>
+                        <div class="grupo-checkbox">
+                            <input type="checkbox" id="ia" name="interesses" value="ia">
+                            <label for="ia">Inteligência Artificial</label>
+                        </div>
+                    </div>
+                    <div class="grupo-checkbox">
+                        <input type="checkbox" id="devweb" name="interesses" value="devweb">
+                        <label for="devweb">Desenvolvimento Web</label>
+                    </div>
+                    <div class="grupo-checkbox">
+                        <input type="checkbox" id="dados" name="interesses" value="dados">
+                        <label for="dados">Ciência de dados</label>
+                    </div>
+                    <div class="campo">
+                        <label for="nivel-experiencia">
+                            Seu nível de experiência com tecnologia:
+                        </label>
+                        <input type="range" id="nivel-experiencia" name="nivel-experiencia" min="0" max="10" step="1"
+                            value="5">
+                    </div>
+                    <div class="campo">
+                        <label for="palestra">Qual palestra te interessa?</label>
+                        <input list="sugestoes-palestra" id="palestra">
+                        <datalist id="sugestoes-palestra">
+                            <option value="O futuro do react">
+                            <option value="Machine Learn na pratica">
+                            <option value="Design systems com Figma">
+                        </datalist>
+                   </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Extras</legend>
+                <div class="campo">
+                    <label for="cor-cracha">Cor do crachá</label>
+                    <input type="color"  value="#4a69bd">
+                </div>
+                <div class="campo">
+                    <label for="comprovante">Anexar comprovante de
+                         estudante</label>
+                         <input type="file">
+                </div>
+            </fieldset>
+            <div class="botoes">
+                <button type="submit">Garantir minha vaga</button>
+                <button type="reset">Limpar formulário</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
